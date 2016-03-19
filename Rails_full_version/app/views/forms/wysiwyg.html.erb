@@ -1,0 +1,57 @@
+  <div class="pageheader">
+                <h1>WYSIWYG Editor</h1>
+                <div class="breadcrumb-wrapper hidden-xs">
+                    <span class="label">You are here:</span>
+                    <ol class="breadcrumb">
+                        <li><a href="/">Dashboard</a>
+                        </li>
+                        <li>Forms</li>
+                        <li class="active">WYSIWYG Editor</li>
+                    </ol>
+                </div>
+            </div>
+            <section id="main-content" class="animated fadeInUp">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">bootstrap wysihtml5</h3>
+                                <div class="actions pull-right">
+                                 <i class="fa fa-expand"></i>
+                                    <i class="fa fa-chevron-down"></i>
+                                    <i class="fa fa-times"></i>
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <textarea class="textarea form-control" rows="10" cols="80" placeholder="Enter text ..." style="width: 100%; height: 200px"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">CKEditor</h3>
+                                <div class="actions pull-right">
+                                    <i class="fa fa-chevron-down"></i>
+                                    <i class="fa fa-times"></i>
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <textarea name="editor1" id="editor1" rows="10" cols="80">
+
+                                </textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <% content_for :javascript do %>
+                   <!--Load these page level functions-->
+                    <script>
+                    $(document).ready(function() {
+                        $('.textarea').wysihtml5();
+                        CKEDITOR.replace('editor1');
+                    });
+                    </script>
+            <% end %>

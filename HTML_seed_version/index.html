@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>NeuBoard</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <!-- Fonts  -->
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/simple-line-icons.css">
+    <!-- CSS Animate -->
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <!-- Custom styles for this theme -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <!-- Feature detection -->
+    <script src="assets/js/vendor/modernizr-2.6.2.min.js"></script>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/vendor/html5shiv.js"></script>
+    <script src="assets/js/vendor/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <section id="main-wrapper" class="theme-default">
+        <header id="header">
+            <!--logo start-->
+            <div class="brand">
+                <a href="index.html" class="logo">
+                    <span>APP</span>NAME</a>
+            </div>
+            <!--logo end-->
+            <ul class="nav navbar-nav navbar-left">
+                <li class="toggle-navigation toggle-left">
+                    <button class="sidebar-toggle" id="toggle-left">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                </li>
+                <li class="toggle-profile hidden-xs">
+                    <button type="button" class="btn btn-default" id="toggle-profile">
+                        <i class="icon-user"></i>
+                    </button>
+                </li>
+                <li class="hidden-xs">
+                    <input type="text" class="search" placeholder="Search project...">
+                    <button type="submit" class="btn btn-sm btn-search"><i class="fa fa-search"></i>
+                    </button>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="toggle-navigation toggle-right">
+                    <button class="sidebar-toggle" id="toggle-right">
+                        <i class="fa fa-indent"></i>
+                    </button>
+                </li>
+            </ul>
+        </header>
+        <!--sidebar left start-->
+        <aside class="sidebar sidebar-left">
+            <div class="sidebar-profile">
+                <div class="avatar">
+                    <img class="img-circle profile-image" src="assets/img/profile.jpg" alt="profile">
+                    <i class="on border-dark animated bounceIn"></i>
+                </div>
+                <div class="profile-body dropdown">
+                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><h4>Example User<span class="caret"></span></h4></a>
+                    <small class="title">Front-end Developer</small>
+                    <ul class="dropdown-menu animated fadeInRight" role="menu">
+                        <li class="profile-progress">
+                            <h5>
+                                <span>80%</span>
+                                <small>Profile complete</small>
+                            </h5>
+                            <div class="progress progress-xs">
+                                <div class="progress-bar progress-bar-primary" style="width: 80%">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <span class="icon"><i class="fa fa-user"></i>
+                                </span>My Account</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <span class="icon"><i class="fa fa-envelope"></i>
+                                </span>Messages</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <span class="icon"><i class="fa fa-cog"></i>
+                                </span>Settings</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <span class="icon"><i class="fa fa-sign-out"></i>
+                                </span>Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <nav>
+                <h5 class="sidebar-header">Navigation</h5>
+                <ul class="nav nav-pills nav-stacked">
+                    <li class="active">
+                        <a href="index.html" title="Dashboard">
+                            <i class="fa  fa-fw fa-tachometer"></i> Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a href="#" title="UI Elements">
+                            <i class="fa fa-fw fa-file-text"></i> Pages
+                        </a>
+                        <ul class="nav-sub">
+                            <li>
+                                <a href="pages-blank.html" title="Buttons">
+                                     Blank Page
+                                </a>
+                            </li>
+                            <li>
+                                <a href="pages-another-blank.html" title="Sliders &amp; Progress">
+                                     Another Blank Page
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <!--sidebar left end-->
+        <!--main content start-->
+        <section class="main-content-wrapper">
+            <div class="pageheader">
+                <h1>Dashboard</h1>
+                <p class="description">Welcome to NEUBOARD Responsive Admin Theme</p>
+                <div class="breadcrumb-wrapper hidden-xs">
+                    <span class="label">You are here:</span>
+                    <ol class="breadcrumb">
+                        <li class="active">Dashboard</li>
+                    </ol>
+                </div>
+            </div>
+            <section id="main-content">
+                <div class="row">
+                        <div class="col-md-12 col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-body ng-binding">
+                You can quickly bootstrap your Web App project here.
+                </div>
+            </div>
+        </div>
+                </div>
+            </section>
+        </section>
+        <!--main content end-->
+    </section>
+    <!--sidebar right start-->
+    <aside id="sidebar-right">
+        <h4 class="sidebar-title">contact List</h4>
+        <div id="contact-list-wrapper">
+            <div class="heading">
+                <ul>
+                    <li class="new-contact"><a href="javascript:void(0)"><i class="fa fa-plus"></i></a>
+                    </li>
+                    <li>
+                        <input type="text" class="search" placeholder="Search">
+                        <button type="submit" class="btn btn-sm btn-search"><i class="fa fa-search"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <div id="contact-list">
+
+            </div>
+            <div id="contact-user">
+                <div class="chat-user active"><span><i class="icon-bubble"></i></span>
+                </div>
+                <div class="email-user"><span><i class="icon-envelope-open"></i></span>
+                </div>
+                <div class="call-user"><span><i class="icon-call-out"></i></span>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <!--/sidebar right end-->
+    <!--Global JS-->
+    <script src="assets/js/vendor/jquery-1.11.1.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/plugins/navgoco/jquery.navgoco.min.js"></script>
+    <script src="assets/plugins/pace/pace.min.js"></script>
+    <script src="assets/js/src/app.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>NeuBoard</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <!-- Global styles -->
+    <%= stylesheet_link_tag 'base' %>
+    <!-- Page level styles -->
+    <%= stylesheet_link_tag params[:controller] if ::Rails.application.assets.find_asset("#{params[:controller]}.css") %> 
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= csrf_meta_tags %>
+</head>
+<body>
+
+<body>
+  <section class="container animated fadeInUp">
+          <%= yield %>
+  </section>
+
+      <!-- Global scripts -->
+     <%= javascript_include_tag 'base' %>
+     <!-- Page level plugin scripts -->
+     <%= javascript_include_tag params[:controller] if ::Rails.application.assets.find_asset("#{params[:controller]}.js") %> 
+     <%= javascript_include_tag 'application' %>
+     <%= yield :javascript %>
+
+</body>
+</html>

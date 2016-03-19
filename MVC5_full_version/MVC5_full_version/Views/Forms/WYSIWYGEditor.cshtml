@@ -1,0 +1,49 @@
+﻿@{
+    ViewBag.Title = "WYSIWYG Editor";
+}
+
+<div class="pageheader">
+    <h1>WYSIWYG Editor</h1>
+    <div class="breadcrumb-wrapper hidden-xs">
+        <span class="label">You are here:</span>
+        <ol class="breadcrumb">
+            <li>
+                <a href="index.html">Dashboard</a>
+            </li>
+            <li>Forms</li>
+            <li class="active">WYSIWYG Editor</li>
+        </ol>
+    </div>
+</div>
+<section id="main-content" class="animated fadeInUp">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">bootstrap wysihtml5</h3>
+                    <div class="actions pull-right">
+                        <i class="fa fa-expand"></i>
+                        <i class="fa fa-chevron-down"></i>
+                        <i class="fa fa-times"></i>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <textarea class="textarea form-control" rows="10" cols="80" placeholder="Enter text ..." style="width: 100%; height: 200px"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+@section Styles {
+    @Styles.Render("~/plugins/wysihtml5CSS")
+}
+<!--Load these page level functions-->
+@section Scripts {
+    @Scripts.Render("~/plugins/wysihtml5")
+    @Scripts.Render("~/plugins/bootstrap3-wysihtml5")
+    <script>
+    $(document).ready(function () {
+        $('.textarea').wysihtml5();
+    });
+    </script>
+}

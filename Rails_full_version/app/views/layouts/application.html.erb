@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>NeuBoard</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <!-- Global styles -->
+    <%= stylesheet_link_tag 'base' %>
+    <!-- Page level styles -->
+    <%= stylesheet_link_tag params[:controller] if ::Rails.application.assets.find_asset("#{params[:controller]}.css") %> 
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= csrf_meta_tags %>
+</head>
+<body>
+
+<body>
+    <!-- Page Wrapper-->
+     <section id="main-wrapper" class="theme-default">
+       <!-- Page wrapper -->
+        <header id="header"> <%= render partial: "layouts/partials/header" %> </header>
+        <!-- Left Sidebar Navigation -->
+        <aside class="sidebar sidebar-left"> <%= render partial: "layouts/partials/leftsidebar" %> </aside>
+        <!-- Content wraper -->
+         <section class="main-content-wrapper">
+            <!-- Main content view  -->
+                <%= yield %>
+            <!-- Footer -->
+            <%= render partial: "layouts/partials/footer" %>
+        </section>
+        <!-- /Content wraper-->
+    </section>
+    <!-- /Page wrapper-->
+    <!-- Right Sidebar Navigation -->
+    <%= render partial: "layouts/partials/rightsidebar" %>
+    <!-- /Right Sidebar Navigation -->
+        <!-- Config for demo -->
+    <%= render partial: "layouts/partials/config" %>
+    <!-- /Config for demo -->
+
+      <!-- Global scripts -->
+     <%= javascript_include_tag 'base' %>
+     <!-- Page level plugin scripts -->
+     <%= javascript_include_tag params[:controller] if ::Rails.application.assets.find_asset("#{params[:controller]}.js") %>
+     <%= javascript_include_tag 'application' %>
+     <%= yield :javascript %>
+
+</body>
+</html>

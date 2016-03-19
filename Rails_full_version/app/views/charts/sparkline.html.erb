@@ -1,0 +1,122 @@
+  <div class="pageheader">
+                <h1>Sparkline</h1>
+                <div class="breadcrumb-wrapper hidden-xs">
+                    <span class="label">You are here:</span>
+                    <ol class="breadcrumb">
+                        <li><a href="/">Dashboard</a>
+                        </li>
+                        <li>Charts</li>
+                        <li class="active">Sparkline</li>
+                    </ol>
+                </div>
+            </div>
+            <section id="main-content" class="animated fadeInUp">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Line</h3>
+                                <div class="actions pull-right">
+                                 <i class="fa fa-expand"></i>
+                                    <i class="fa fa-chevron-down"></i>
+                                    <i class="fa fa-times"></i>
+                                </div>
+                            </div>
+                            <div class="panel-body text-center">
+                                <div id="sparkline1"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Bar</h3>
+                                <div class="actions pull-right">
+                                 <i class="fa fa-expand"></i>
+                                    <i class="fa fa-chevron-down"></i>
+                                    <i class="fa fa-times"></i>
+                                </div>
+                            </div>
+                            <div class="panel-body text-center">
+                                <div id="sparkline2"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Pie</h3>
+                                <div class="actions pull-right">
+                                 <i class="fa fa-expand"></i>
+                                    <i class="fa fa-chevron-down"></i>
+                                    <i class="fa fa-times"></i>
+                                </div>
+                            </div>
+                            <div class="panel-body text-center">
+                                <div id="sparkline3"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Line</h3>
+                                <div class="actions pull-right">
+                                 <i class="fa fa-expand"></i>
+                                    <i class="fa fa-chevron-down"></i>
+                                    <i class="fa fa-times"></i>
+                                </div>
+                            </div>
+                            <div class="panel-body text-center">
+                                <div id="sparkline4"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+                        <% content_for :javascript do %>
+                   <!--Load these page level functions-->
+                    <script>
+
+                    $(function() {
+                        $("#sparkline1").sparkline([2, 4, 4, 6, 9, 12, 15, 15, 18, 22, 14, 23, 24, 25, 29, 29, 25, 26, 23, 22, 18, 15, 14, 22, 23, 12, 8, 4, 2], {
+                            type: 'line',
+                            lineWidth: 2,
+                            lineColor: '#1F7BB6',
+                            fillColor: '#1ABC9C',
+                            height: '12em',
+                            width: '15em'
+                        });
+
+                        $("#sparkline2").sparkline([5, 6, 7, 2, 0, 4, 2, 4, 5, -1, 7, 2, 4, 12, 14, 4, -1, 2, 14, 12, 7], {
+                            type: 'bar',
+                            barWidth: 12,
+                            barColor: '#1ABC9C',
+                            negBarColor: '#1F7BB6',
+                            height: '12em',
+                            width: '15em'
+                        });
+
+                        $("#sparkline3").sparkline([5, 3, 4, 1], {
+                            type: 'pie',
+                            height: '12em',
+                            width: '15em',
+                            sliceColors: ['#1ABC9C', '#1F7BB6', '#556B8D', '#EDCE8C']
+                        });
+
+                        $("#sparkline4").sparkline([22, 24, 55, 12, 34, 66, 23, 45, 77, 43, 34, 25, 88, 44, 26, 22, 14, 32, 42, 56, 27, 33, 47, 79, 34, 67, 43, 84, 19, 22], {
+                            type: 'line',
+                            lineWidth: 2,
+                            height: '12em',
+                            width: '15em',
+                            lineColor: '#17997f',
+                            fillColor: '#ffffff',
+                        });
+                    });
+  
+                    </script>
+            <% end %>
